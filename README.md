@@ -3,30 +3,94 @@
 # 프로젝트 소개
 절약왕국 프로젝트는 MSA와 쿠버네티스를 기반으로 구축한 디지털 플랫폼으로, 최저가 공유와 거지방 커뮤니티를 통합하여 경제적이고 환경 친화적인 소비를 촉진하는 것을 목표로 한다. MSA를 통해 각 기능이 독립적으로 개발되고 운영되어 유연성과 확장성이 향상된다. 쿠버네티스를 활용한 컨테이너 오케스트레이션은 높은 가용성을 보장하고, 자동 스케일링 및 롤링 업데이트를 통해 서비스 중단 없이 효율적으로 자원을 관리한다. 이로써 절약왕국은 사용자에게 안정적이고 지속 가능한 서비스를 제공한다.
 
+
+
 ### 서비스 개발 시 고려한 중점사항
-- 마이크로 서비스 아키텍처 설계
+1. 마이크로 서비스 아키텍처 설계 : 
 단일 장애 지점을 최소화하여 서버 안정성 향상
 각 서비스의 필요 리소스에 맞게 독립적으로 스케일링 가능
+    <details>
+    <summary>더보기</summary>
 
--	데이터 가용성 확보
+    <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
+   
+    ![화면 캡처 2024-06-24 175551](https://github.com/rndudals/MSA_Project/assets/102203336/7efd482c-ed0c-48a5-88cb-1ffa40a639b2)
+   
+     - Kubernetes 클러스터를 활용하여 애플리케이션을 배포하고 관리합니다. 
+     - 클러스터는 마스터 노드 1개와 워커 노드 2개로 이루어져 있으며, 이를 통해 애플리케이션의 배포, 확장, 관리, 복구 등의 오케스트레이션을 자동화합니다. 
+
+
+    ![화면 캡처 2024-06-24 175609](https://github.com/rndudals/MSA_Project/assets/102203336/f947125c-458d-4589-97f8-2903bf678f32)
+   
+    - 클러스터의 전체 파드 목록을 보여줍니다. 
+    </details>
+
+3. 데이터 가용성 확보 : 
 각 서비스별로 적합한 데이터베이스 사용
 독립적인 PV(PersistentVolume), PVC(PersistentVolumeClaim) 생성으로 데이터 영구 저장
+    <details>
+    <summary>더보기</summary>
 
--	자체 복구 기능 활용
-쿠버네티스의 Sefl-healing 기능으로 비정상 컨테이너 자동 교체
+    <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
+    ![화면 캡처 2024-06-24 175337](https://github.com/rndudals/MSA_Project/assets/102203336/f1dd8b5c-ec83-4c57-994f-6d19761c3b3a)
+
+
+    - 데이터의 영속성 보장과 유연한 스토리지 할당을 위해 Persistent Volume (PV)과 Persistent Volume Claim (PVC)를 사용했습니다. 
+    - 이를 통해 애플리케이션 재시작 시에도 데이터를 안전하게 유지하고, 필요한 스토리지를 동적으로 요청할 수 있습니다. 
+
+    </details>
+    
+4. 자체 복구 기능 활용 : 
+쿠버네티스의 Self-healing 기능으로 비정상 컨테이너 자동 교체
 안정적인 서비스 유지
 
--	무중단 배포 구현
+    <details>
+    <summary>더보기</summary>
+
+    <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
+    ![화면 캡처 2024-06-24 175146](https://github.com/rndudals/MSA_Project/assets/102203336/6423d8ac-c628-4df5-9476-832ff83c6f65)
+
+    - initialDelaySeconds: 컨테이너가 시작된 후 처음 상태 확인을 시작하기 전 대기 시간을 60초로 설정했습니다. 
+    - periodSeconds: 상태 확인 주기는 30초로 설정했습니다.  
+    - 이 설정을 통해 Kubernetes는 컨테이너가 비정상적인 상태일 때 자동으로 재시작하여 서비스의 가용성과 안정성을 보장합니다.
+
+    </details>
+    
+5. 무중단 배포 구현 : 
 쿠버네티스의 Rolling Update 기능 활용
 새로운 버전 배포 시 서비스 중단 최소화 
 
--	자동 스케일링 적용
+    <details>
+    <summary>더보기</summary>
+
+    <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
+    ㄴㅇㄹㅇㄹㄴ
+
+    </details>
+    
+6. 자동 스케일링 적용 : 
 쿠버네티스의 Auto-Scaling 기능 활용
 HPA(HorizontalPodAutoscaler)로 CPU 사용량에 따른 레플리카 셋 개수 조절
 
--	성능 모니터링 및 측정
+    <details>
+    <summary>더보기</summary>
+
+    <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
+    ㄴㅇㄹㅇㄹㄴ
+
+    </details>
+    
+7. 성능 모니터링 및 측정 : 
 Jmeter와 Lighthouse를 이용한 반응 속도 및 서비스 성능 측정
 
+    <details>
+    <summary>더보기</summary>
+
+    <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
+    ㄴㅇㄹㅇㄹㄴ
+
+    </details>
+    
 
 
 
