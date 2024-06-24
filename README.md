@@ -100,7 +100,7 @@ Jmeter와 Lighthouse를 이용한 반응 속도 및 서비스 성능 측정
 
     <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
     ![화면 캡처 2024-06-24 180741](https://github.com/rndudals/MSA_Project/assets/102203336/683dce72-59dd-4cef-9cf4-6439635779a9)
-    - 초딩 500명이 동시 접속했을 때의 성능 테스트 결과입니다. 
+    - 초당 500명이 동시 접속했을 때의 성능 테스트 결과입니다. 
 
     </details>
     
