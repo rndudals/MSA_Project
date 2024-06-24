@@ -64,11 +64,17 @@
     <summary>더보기</summary>
 
     <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
-    ㄴㅇㄹㅇㄹㄴ
+    ![화면 캡처 2024-06-24 180926](https://github.com/rndudals/MSA_Project/assets/102203336/df3b372e-90a1-49f6-94fe-0203cabf6fe5)
+
+   
+    - RollingUpdate: Deployment의 업데이트 전략으로 롤링 업데이트를 사용함을 지정합니다.
+    - maxUnavailable: 업데이트 과정에서 최대 몇 개의 파드가 동시에 중단될 수 있는지를 지정합니다. 여기서는 1개 파드가 중단될 수 있음을 의미합니다. 
+    - maxSurge: 업데이트 과정에서 최대 몇 개의 파드를 추가로 생성할 수 있는지를 지정합니다. 여기서는 1개 파드를 추가로 생성할 수 있음을 의미합니다. 
+    - 이렇게 하면 서비스 중단을 최소화하면서 새로운 버전으로 안전하게 업데이트할 수 있습니다. 
 
     </details>
     
-6. 자동 스케일링 적용 : 
+7. 자동 스케일링 적용 : 
 쿠버네티스의 Auto-Scaling 기능 활용
 HPA(HorizontalPodAutoscaler)로 CPU 사용량에 따른 레플리카 셋 개수 조절
 
@@ -76,18 +82,27 @@ HPA(HorizontalPodAutoscaler)로 CPU 사용량에 따른 레플리카 셋 개수 
     <summary>더보기</summary>
 
     <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
-    ㄴㅇㄹㅇㄹㄴ
+    ![화면 캡처 2024-06-24 180405](https://github.com/rndudals/MSA_Project/assets/102203336/0e72631c-efcd-4ded-adbd-4972e42a423b)
 
+    - Kubernetes 클러스터에서 자동 스케일링을 구현했습니다. 이 설정을 통해 파드 수는 부하에 따라 자동으로 조정됩니다.
+    - 최소 파드 수는 3개, 최대 파드 수는 50개로 제한되며, CPU 사용률이 평균 50%가 되도록 파드 수를 조정합니다.
+    - 이를 통해 애플리케이션의 부하에 따라 효율적인 리소스 사용이 보장됩니다.
+  
+    ![화면 캡처 2024-06-24 180548](https://github.com/rndudals/MSA_Project/assets/102203336/068d04d6-cc8d-427a-ad24-20a41d3bfad1)
+
+    - HPA가 CPU 사용률에 따라 Replicas수를 조정하는 과정 입니다.
+    - 부하가 증가할 때 Replicas 수가 늘어납니다.
     </details>
     
-7. 성능 모니터링 및 측정 : 
+8. 성능 모니터링 및 측정 : 
 Jmeter와 Lighthouse를 이용한 반응 속도 및 서비스 성능 측정
 
     <details>
     <summary>더보기</summary>
 
     <!--summary 아래 빈칸 공백 두고 내용을 적는공간-->
-    ㄴㅇㄹㅇㄹㄴ
+    ![화면 캡처 2024-06-24 180741](https://github.com/rndudals/MSA_Project/assets/102203336/683dce72-59dd-4cef-9cf4-6439635779a9)
+    - 초딩 500명이 동시 접속했을 때의 성능 테스트 결과입니다. 
 
     </details>
     
