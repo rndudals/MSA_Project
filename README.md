@@ -29,19 +29,6 @@ Jmeter와 Lighthouse를 이용한 반응 속도 및 서비스 성능 측정
 
 
 
-# 프로젝트 기능
-
-### 1. 비회원/회원 가입 기능
-![화면 캡처 2024-06-24 173201](https://github.com/rndudals/MSA_Project/assets/102203336/6380a198-a280-4471-972c-1fbc974a2eca)
-
-
-### 2. 거지방 커뮤니티 자유게시판(Bulletin Board) 기능
-![화면 캡처 2024-06-24 173223](https://github.com/rndudals/MSA_Project/assets/102203336/08220c47-1f9f-460e-a3f2-ff6cb10b8cfc)
-
-
-### 3. 물품 최저가 공유 기능(Sharing Board) 기능
-![화면 캡처 2024-06-24 173237](https://github.com/rndudals/MSA_Project/assets/102203336/6ec1a5aa-2edd-459b-a095-b800002ccb95)
-
 
 
 # 프로젝트 구조
@@ -64,5 +51,21 @@ Jmeter와 Lighthouse를 이용한 반응 속도 및 서비스 성능 측정
 ![2](https://github.com/rndudals/MSA_Project/assets/102203336/5a8390f2-6f1b-4edd-a76f-1119ed963d04)
 
 각 서비스가 데이터베이스와 연결되어 있으며, istio-ingressgateway를 통해 외부 트래픽이 내부 서비스로 라우팅된다. 
+
+
+
+
+# 프로젝트 기능
+
+### 1. 비회원/회원 가입 기능
+![화면 캡처 2024-06-24 173201](https://github.com/rndudals/MSA_Project/assets/102203336/6380a198-a280-4471-972c-1fbc974a2eca)
+
+
+### 2. 거지방 커뮤니티 자유게시판(Bulletin Board) 기능
+![화면 캡처 2024-06-24 173223](https://github.com/rndudals/MSA_Project/assets/102203336/08220c47-1f9f-460e-a3f2-ff6cb10b8cfc)
+
+
+### 3. 물품 최저가 공유 기능(Sharing Board) 기능
+![화면 캡처 2024-06-24 173237](https://github.com/rndudals/MSA_Project/assets/102203336/6ec1a5aa-2edd-459b-a095-b800002ccb95)
 
 
