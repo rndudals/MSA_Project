@@ -72,7 +72,7 @@
 
     </details>
     
-7. 자동 스케일링 적용 : 
+7. 오토 스케일링 적용 : 
 쿠버네티스의 Auto-Scaling 기능 활용
 HPA(HorizontalPodAutoscaler)로 CPU 사용량에 따른 레플리카 셋 개수 조절
 
